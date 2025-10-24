@@ -15,7 +15,7 @@ function welcomeSpeech() {
     }
     
     // Greet the user with their name and update the home section
-    document.getElementById('greet-name').innerHTML = `${name}`; // Hanya update nama di span
+    document.getElementById('greet-name').innerHTML = `Hi ${name}`; // Hanya update nama di span
 }
 
 /// Function to validate form inputs and display them
