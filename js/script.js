@@ -24,27 +24,26 @@ function validateForm(event) {
 
     // Get form input values
     const name = document.getElementById('name-input').value;
-    const dateOfBirth = document.getElementById('date-input').value;
+    // Mengambil nilai Email
+    const email = document.getElementById('email-input').value;
+    // Mengambil nilai Nomor Telepon
+    const phone = document.getElementById('phone-input').value;
     const message = document.getElementById('message-input').value;
-    const gender = document.querySelector('input[name="gender"]:checked');
-    const genderValue = gender ? gender.value : "";
 
     // Check if any required field is empty
-    if (name.trim() === "" || dateOfBirth === "" || message.trim() === "" || genderValue === "") {
+    // Memeriksa Nama, Email, Nomor Telepon, dan Pesan
+    if (name.trim() === "" || email.trim() === "" || phone.trim() === "" || message.trim() === "") {
         /// Show alert if any field is empty
-        alert("Semua kolom (Nama, Tanggal Lahir, Jenis Kelamin, Pesan) wajib diisi.");
+        alert("Semua kolom (Nama, Email, Nomor Telepon, Pesan) wajib diisi.");
         return; // Hentikan eksekusi jika ada field yang kosong
     }
 
-    // Format tanggal lahir
-    const [year, month, day] = dateOfBirth.split('-');
-    const formattedDate = `${day}/${month}/${year}`;
-
     // Update the submission output section
+    // Memperbarui output dengan Email dan Nomor Telepon
     document.getElementById('submission-output').innerHTML = `
         <li><span class="font-bold">Nama :</span> ${name}</li>
-        <li><span class="font-bold">Tanggal Lahir :</span> ${formattedDate}</li>
-        <li><span class="font-bold">Jenis Kelamin :</span> ${genderValue}</li>
+        <li><span class="font-bold">Email :</span> ${email}</li>
+        <li><span class="font-bold">Nomor Telepon :</span> ${phone}</li>
         <li><span class="font-bold">Pesan :</span> ${message}</li>
     `;
 

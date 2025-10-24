@@ -1,22 +1,28 @@
 <!DOCTYPE html>
+<!-- Deklarasi tipe dokumen dan awal elemen HTML -->
 <html lang="en">
 
 <head>
+    <!-- Pengaturan metadata halaman web -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Tria</title>
 
+    <!-- Menghubungkan file CSS eksternal untuk styling khusus -->
     <link rel="stylesheet" href="css\style.css">
 
+    <!-- Memuat CDN Tailwind CSS untuk utilitas styling cepat -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
-
+    <!-- Bagian Header Utama (Navigasi Atas) -->
     <header class="main-header p-[8px]">
+        <!-- Area untuk Logo Website (div kosong yang di-style di CSS) -->
         <div class="main-logo"></div>
 
-        <nav class="flex gap-4">
+        <!-- Menu Navigasi (Navigasi ke setiap bagian halaman) -->
+        <nav class="flex gap-2">
             <a class="border rounded p-2" href="#home-section">Home</a>
             <a class="border rounded p-2" href="#profile-section">Our Profile</a>
             <a class="border rounded p-2" href="#portfolio-section">Portfolio</a>
@@ -27,18 +33,22 @@
 
     <hr />
 
+    <!-- Bagian Konten Utama Halaman -->
     <main>
-        <section id="home-section" class="hero-section p-8 min-h-[500px] flex flex-col justify-center items-center text-center">
+        <!-- Bagian Home/Hero Section: Sambutan dan Banner -->
+        <section id="home-section" class="hero-section p-8 min-h-[700px] flex flex-col justify-center items-center text-center">
             <h1 class="text-4xl font-bold mb-4">Hi <span id="greet-name"></span>, Welcome To Website</h1>
             <p class="text-xl max-w-2xl">Kami adalah perusahaan teknologi yang berfokus pada pengembangan solusi digital inovatif untuk klien di seluruh dunia. Selamat datang di laman resmi kami!</p>
-            <img src="https://picsum.photos/800/400" alt="Banner Selamat Datang" class="mt-8 rounded-lg shadow-xl">
+            <img src="https://picsum.photos/800/400" alt="Banner Selamat Datang" class="mt-10 rounded-lg shadow-xl">
         </section>
 
         <hr />
 
-        <section id="profile-section" class="profile-section p-8 min-h-[500px]">
+        <!-- Bagian Our Profile: Visi, Misi, dan Layanan Inti -->
+        <section id="profile-section" class="profile-section p-8 min-h-[1000px]">
             <h2 class="text-3xl font-bold mb-10 text-center">Our Profile - Mengenal Kami Lebih Dekat</h2>
             <div class="max-w-5xl mx-auto">
+                <!-- Grid untuk Visi, Ilustrasi, dan Misi -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 items-stretch">
                     <div class="border p-6 rounded-xl shadow-lg bg-gray-50 hover:shadow-xl transition duration-300 transform hover:scale-[1.01] flex flex-col justify-start">
                         <h3 class="text-2xl font-bold mb-3 text-blue-600">Visi Kami</h3>
@@ -60,6 +70,7 @@
                     </div>
                 </div>
                 
+                <!-- Bagian Layanan Inti -->
                 <div class="mt-8 border p-8 rounded-xl shadow-lg bg-gray-50 text-center">
                     <h3 class="text-3xl font-extrabold mb-4 text-indigo-700">Layanan Inti Kami 🚀</h3>
                     <p class="text-xl mb-4 max-w-3xl mx-auto">Kami tidak hanya membangun *software*, kami membangun solusi masa depan. Layanan kami mencakup seluruh siklus digital:</p>
@@ -74,24 +85,26 @@
 
         <hr />
 
-        <section id="portfolio-section" class="portfolio-section p-8 min-h-[500px] text-center">
+        <!-- Bagian Our Portfolio: Showcase Proyek Unggulan -->
+        <section id="portfolio-section" class="portfolio-section p-8 min-h-[800px] text-center">
             <h2 class="text-3xl font-bold mb-10">Our Portfolio - Proyek Unggulan</h2>
             <div class="max-w-6xl mx-auto">
                 <p class="text-lg text-gray-700 mb-12">Kami bangga menyajikan beberapa proyek transformatif yang telah kami selesaikan untuk klien di berbagai industri.</p>
+                <!-- Grid untuk menampilkan kartu-kartu proyek -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="border p-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.01] text-left">
+                    <div class="border p-4 rounded-xl shadow-lg bg-gray-50 hover:shadow-xl transition duration-300 transform hover:scale-[1.01] text-left">
                         <img src="https://picsum.photos/400/250?random=1" alt="E-Commerce Platform" class="rounded-lg mb-4 w-full h-auto object-cover">
                         <h3 class="text-xl font-bold mb-2 text-indigo-600">E-Commerce Platform Revamp</h3>
                         <p class="text-sm text-gray-600">Pembangunan ulang platform belanja online dengan fokus pada pengalaman pengguna (UX) dan kecepatan transaksi. Teknologi: ReactJS, NodeJS, MongoDB.</p>
                     </div>
                     
-                    <div class="border p-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.01] text-left">
+                    <div class="border p-4 rounded-xl shadow-lg bg-gray-50 hover:shadow-xl transition duration-300 transform hover:scale-[1.01] text-left">
                         <img src="https://picsum.photos/400/250?random=2" alt="Mobile Banking App" class="rounded-lg mb-4 w-full h-auto object-cover">
                         <h3 class="text-xl font-bold mb-2 text-indigo-600">Aplikasi Mobile Banking</h3>
                         <p class="text-sm text-gray-600">Pengembangan aplikasi mobile banking yang aman dan intuitif. Fitur: transfer real-time, QR payment, dan manajemen budget. Teknologi: Flutter, Firebase.</p>
                     </div>
                     
-                    <div class="border p-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.01] text-left">
+                    <div class="border p-4 rounded-xl shadow-lg bg-gray-50 hover:shadow-xl transition duration-300 transform hover:scale-[1.01] text-left">
                         <img src="https://picsum.photos/400/250?random=3" alt="Data Analytics Dashboard" class="rounded-lg mb-4 w-full h-auto object-cover">
                         <h3 class="text-xl font-bold mb-2 text-indigo-600">Dashboard Analitik Bisnis</h3>
                         <p class="text-sm text-gray-600">Pembuatan dashboard visualisasi data interaktif untuk memantau kinerja operasional secara *real-time*. Teknologi: Python (Pandas), D3.js, PostgreSQL.</p>
@@ -102,6 +115,7 @@
 
         <hr />
 
+        <!-- Bagian Our Headquarter: Daftar Lokasi Kantor -->
         <section id="headquarter-section" class="headquarter-section p-8 min-h-[300px] text-center">
             <h2 class="text-3xl font-bold mb-10">Our Headquarter</h2>
             <div class="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0">
@@ -124,41 +138,35 @@
 
         <hr />
 
+        <!-- Bagian Message Us: Formulir Kontak dan Tampilan Data -->
         <section id="message-section" class="message-section p-8 min-h-[600px]">
             <h2 class="text-3xl font-bold mb-6 text-center">Message Us - Kirim Pesan ke Tim Kami</h2>
             <div class="max-w-4xl mx-auto flex flex-col md:flex-row border p-6 rounded-lg shadow-lg">
                 <div class="w-full md:w-1/2 md:pr-4">
                     <form id="message-form">
-                        <label for="name-input" class="block mb-2 font-semibold">Nama:</label>
+                        <label for="name-input" class="block mb-2 font-semibold">Nama :</label>
                         <input type="text" id="name-input" name="name" class="border p-2 mb-4 w-full rounded" required>
 
-                        <label for="date-input" class="block mb-2 font-semibold">Tanggal Lahir:</label>
-                        <input type="date" id="date-input" name="date" class="border p-2 mb-4 w-full rounded" required>
+                        <label for="email-input" class="block mb-2 font-semibold">Email :</label>
+                        <input type="email" id="email-input" name="email" class="border p-2 mb-4 w-full rounded" required>
                         
-                        <label for="gender" class="block mb-2 font-semibold">Jenis Kelamin:</label>
-                        <div class="flex gap-4 mb-4">
-                            <label class="flex items-center">
-                                <input type="radio" id="laki" name="gender" value="Laki-laki" class="mr-1" required> Laki-laki
-                            </label>
-                            <label class="flex items-center">
-                                <input type="radio" id="perempuan" name="gender" value="Perempuan" class="mr-1"> Perempuan
-                            </label>
-                        </div>
-
-                        <label for="message-input" class="block mb-2 font-semibold">Pesan:</label>
+                        <label for="phone-input" class="block mb-2 font-semibold">Nomor Telepon :</label>
+                        <input type="tel" id="phone-input" name="phone" class="border p-2 mb-4 w-full rounded" required>
+                        <label for="message-input" class="block mb-2 font-semibold">Pesan :</label>
                         <textarea id="message-input" name="message" class="border p-2 mb-4 w-full rounded" rows="4" required></textarea>
                     </form>
                     <button type="submit" onclick="validateForm(event)" class="bg-blue-600 text-white p-2 rounded w-full font-bold hover:bg-blue-700 transition duration-300">Submit</button>
                 </div>
 
+                <!-- Kolom Informasi Saat Ini & Output Data (Kanan) -->
                 <div class="w-full md:w-1/2 md:pl-4 mt-8 md:mt-0 border-t md:border-t-0 md:border-l pt-4 md:pt-0 md:pl-6">
                     <h3 class="text-xl font-bold mb-7 text-center">Current Information</h3>
                     <p class="mb-2"><span class="font-bold">Current Time:</span> <span id="current-time"></span></p>
                     <h4 class="font-bold mt-4">Submitted Data:</h4>
                     <ul class="text-sm space-y-1 mt-2 border p-3 rounded bg-gray-50" id="submission-output">
                         <li><span class="font-bold">Nama :</span> -</li>
-                        <li><span class="font-bold">Tanggal Lahir :</span> -</li>
-                        <li><span class="font-bold">Jenis Kelamin :</span> -</li>
+                        <li><span class="font-bold">Email :</span> -</li> 
+                        <li><span class="font-bold">Nomor Telepon :</span> -</li>
                         <li><span class="font-bold">Pesan :</span> -</li>
                     </ul>
                 </div>
@@ -166,12 +174,14 @@
         </section>
     </main>
 
+    <!-- Bagian Footer (Kaki Halaman) -->
     <footer>
         <div class="footer-content p-4 text-center border-t mt-8">
             <p class="text-sm">&copy; 2025 Portfolio Tria. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Memuat file JavaScript untuk fungsionalitas interaktif -->
     <script src="js\script.js"></script>
 </body>
 </html>

@@ -1,25 +1,41 @@
+/* STYLING UNTUK LOGO UTAMA (Header) */
 .main-logo {
+    /* Mengatur tinggi logo */
     height: 75px;
+    /* Mengatur lebar logo */
     width: 75px;
+    /* Warna latar belakang default jika gambar tidak dimuat */
     background-color: darkgray;
+    /* Membuat bentuk lingkaran (50% dari tinggi/lebar) */
     border-radius: 50%;
+    /* Menggunakan gambar dari URL acak sebagai logo */
     background-image: url(https://picsum.photos/200);
+    /* Memastikan gambar menutupi seluruh area logo */
     background-size: cover;
 }
 
+/* STYLING UNTUK HEADER UTAMA (Kontainer Navigasi & Logo) */
 .main-header {
+    /* Menggunakan Flexbox untuk tata letak */
     display: flex;
+    /* Mendistribusikan ruang di antara elemen (logo, teks, navigasi) */
     justify-content: space-between;
+    /* Menyelaraskan elemen secara vertikal di tengah */
     align-items: center;
 }
 
-/* Penambahan styling untuk Headquarter */
+/* STYLING UNTUK IKON HEADQUARTER (Di bagian Our Headquarter) */
 .headquarter-icon {
-    height: 100px; /* Ukuran yang lebih besar untuk ikon di headquarter */
+    /* Ukuran yang lebih besar untuk ikon di headquarter */
+    height: 100px; 
+    /* Mengatur lebar ikon */
     width: 100px;
+    /* Warna latar belakang default */
     background-color: darkgray;
+    /* Membuat bentuk lingkaran */
     border-radius: 50%;
     /* Menggunakan gambar yang sama dengan logo */
-    background-image: url(https://picsum.photos/200); 
+    background-image: url(https://picsum.photos/200);
+    /* Memastikan gambar menutupi seluruh area ikon */ 
     background-size: cover;
 }
