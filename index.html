@@ -116,20 +116,21 @@
         <hr />
 
         <!-- Bagian Our Headquarter: Daftar Lokasi Kantor -->
-        <section id="headquarter-section" class="headquarter-section p-8 min-h-[300px] text-center">
+        <section id="headquarter-section" class="headquarter-section p-8 min-h-[350px] text-center">
             <h2 class="text-3xl font-bold mb-10">Our Headquarter</h2>
             <div class="flex flex-col md:flex-row justify-around items-center space-y-8 md:space-y-0">
                 <div class="flex flex-col items-center">
-                    <div class="main-logo mb-3"></div> <p class="text-xl font-semibold">Jakarta</p>
+                    <div class="headquarter-icon mb-3"></div> 
+                    <p class="text-xl font-semibold">Jakarta</p>
                     <p class="text-sm">Kantor Pusat Indonesia</p>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="main-logo mb-3"></div>
+                    <div class="headquarter-icon mb-3"></div>
                     <p class="text-xl font-semibold">Bandung</p>
                     <p class="text-sm">Pusat Pengembangan & Riset</p>
                 </div>
                 <div class="flex flex-col items-center">
-                    <div class="main-logo mb-3"></div>
+                    <div class="headquarter-icon mb-3"></div>
                     <p class="text-xl font-semibold">Surabaya</p>
                     <p class="text-sm">Kantor Regional Timur</p>
                 </div>
@@ -146,7 +147,17 @@
                     <form id="message-form">
                         <label for="name-input" class="block mb-2 font-semibold">Nama :</label>
                         <input type="text" id="name-input" name="name" class="border p-2 mb-4 w-full rounded" required>
+                        
+                        <label for="date-input" class="block mb-2 font-semibold">Tanggal Lahir :</label>
+                        <input type="date" id="date-input" name="date" class="border p-2 mb-4 w-full rounded" required>
 
+                        <label class="block mb-2 font-semibold">Jenis Kelamin :</label>
+                        <div class="flex gap-4 mb-4">
+                            <input type="radio" id="male" name="gender" value="Laki-laki" class="mr-1" required>
+                            <label for="male" class="mr-4">Laki-laki</label>
+                            <input type="radio" id="female" name="gender" value="Perempuan" class="mr-1">
+                            <label for="female">Perempuan</label>
+                        </div>
                         <label for="email-input" class="block mb-2 font-semibold">Email :</label>
                         <input type="email" id="email-input" name="email" class="border p-2 mb-4 w-full rounded" required>
                         
@@ -158,13 +169,14 @@
                     <button type="submit" onclick="validateForm(event)" class="bg-blue-600 text-white p-2 rounded w-full font-bold hover:bg-blue-700 transition duration-300">Submit</button>
                 </div>
 
-                <!-- Kolom Informasi Saat Ini & Output Data (Kanan) -->
                 <div class="w-full md:w-1/2 md:pl-4 mt-8 md:mt-0 border-t md:border-t-0 md:border-l pt-4 md:pt-0 md:pl-6">
                     <h3 class="text-xl font-bold mb-7 text-center">Current Information</h3>
                     <p class="mb-2"><span class="font-bold">Current Time:</span> <span id="current-time"></span></p>
                     <h4 class="font-bold mt-4">Submitted Data:</h4>
                     <ul class="text-sm space-y-1 mt-2 border p-3 rounded bg-gray-50" id="submission-output">
                         <li><span class="font-bold">Nama :</span> -</li>
+                        <li><span class="font-bold">Tanggal Lahir :</span> -</li>
+                        <li><span class="font-bold">Jenis Kelamin :</span> -</li>
                         <li><span class="font-bold">Email :</span> -</li> 
                         <li><span class="font-bold">Nomor Telepon :</span> -</li>
                         <li><span class="font-bold">Pesan :</span> -</li>
