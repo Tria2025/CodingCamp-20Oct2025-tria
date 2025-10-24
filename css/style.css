@@ -12,3 +12,14 @@
     justify-content: space-between;
     align-items: center;
 }
+
+/* Penambahan styling untuk Headquarter */
+.headquarter-icon {
+    height: 100px; /* Ukuran yang lebih besar untuk ikon di headquarter */
+    width: 100px;
+    background-color: darkgray;
+    border-radius: 50%;
+    /* Menggunakan gambar yang sama dengan logo */
+    background-image: url(https://picsum.photos/200); 
+    background-size: cover;
+}
